@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
-import { Switch } from "./components";
+import { SnackBar, Switch, Table } from "./components";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,10 +18,12 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <SnackBar />
 
       <Switch
         isChecked={isChecked}
         handleChange={() => setIsChecked((prev) => !prev)}
+        size="small"
       />
     </div>
   );
